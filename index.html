@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; padding-right: 40px; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+   
+
+ .container {
+ max-width: 375px;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap:10px;
+ margin: 200px 300px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  .box-1, .box-2 {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+    gap: 2rem; 
+  }
+}
+
+  .box-1,.box-2 {
+    margin: 0 auto;
+    max-width: 20rem;
+    width: 90%;
+  }
+
+  
+h1{
+  margin-left: 10px;
+  color:  hsla(231, 100%, 37%, 0.351);
+
+}
+
+  h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:  20px;
+    color:whitesmoke;
+    font-weight: lighter;
+  }
+
+  h3 {
+   display: flex;
+   justify-content: center;
+   color: white;
+   text-align: justify;
+  }
+
+ p{
+  padding-right: 20px;
+ }
+
+
+
+  .box-1{
+    width: 20rem;
+   height: 30rem;
+    background-color:hsl(241, 81%, 54%) ;
+    border-radius: 5%;
+   
+     
+  }
+
+  #circle{
+    width: 150px;
+    height: 150px;
+    border: 1px solid ;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    color: #333;
+    text-align: center;
+    margin: 20px auto;
+    background-color:  hsla(241, 72%, 46%, 1); 
+
+  }
+
+#circle span {
+  font-weight:bolder;
+  font-size: 50px;
+  padding-top: 20px;
+  color:honeydew;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+  #text-box{
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: left;
+  margin-left: 40px;
+  color: hsl(217, 17%, 71%);
+}
+
+  .box-2{
+  width: 20rem;
+  height: 30rem;
+  background-color:white;
+  border-radius: 5%
+}
+
+  .reaction{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color :papayawhip;
+   width: 300px;
+   height: 50px;
+   margin-bottom: 15px;
+   padding-bottom: 10px;
+   border-radius: 20px;
+   margin-left: 20px;
+  }
+
+  .left-reaction{
+   display: flex;
+   align-items: center;
+   padding-left: 10px;
+   color: hsl(0, 100%, 67%);
+  }
+
+
+  .memory{
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 300px;
+   height: 50px;
+   background-color:beige;
+   margin-bottom: 15px;
+   padding-bottom: 10px;
+   margin-left: 20px;
+   border-radius: 20px;
+  }
+
+  .left-memory{
+    display: flex;
+   align-items: center;
+   padding-left: 10px;
+   color: hsl(39, 100%, 56%);
+   padding-top: 10px;
+  }
+
+  .verbal{
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 300px;
+   height: 50px;
+   background-color : hsl(221, 100%, 96%);
+   margin-bottom: 15px;
+   padding-bottom: 10px;
+   margin-left: 20px;
+   border-radius: 20px;
+  }
+
+  .left-verbal{
+    display: flex;
+   align-items: center;
+   padding-left: 10px;
+   color: hsl(166, 100%, 37%);
+   padding-top: 10px;
+  }
+
+  .visual{
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 300px;
+   height: 50px;
+   background-color:lavender;
+   padding-bottom: 10px;
+   margin-left: 20px;
+   border-radius: 20px;
+  }
+
+  .left-visual {
+    display: flex;
+   align-items: center;
+   padding-left: 10px;
+   color: hsl(221, 100%, 37%);
+  }
+
+  #text{
+    display: flex;
+    justify-content: center;
+    line-height:0px;
+    width: 260px;
+    height: 50px;
+    margin-left: 40px;
+    background-color : hsl(220, 7%, 34%);
+    color: white;
+    margin-top: 40px;
+   border-radius: 50px;
+   font-size: 18px;
+   font-weight: bolder;
+  }
+
+  .icon{
+    padding-right: 10px;
+  }
+ 
+  .strong {
+    font-weight: bolder;
+    color:  #000000;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+ <section class="box-1">
+  <h2>Your Result</h2>
+  <p id="circle"><span>76</span>
+  of 100</p>
+
+  <h3>Great</h3>
+  <p id="text-box">You scored higher than 65% of<br>&nbsp;&nbsp;&nbsp; the people who have taken<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;these tests.</p>
+ </section>
+
+ <section class=" box-2">
+
+  <h1>Summary</h1>
+
+  <div class="reaction">
+    <div class="left-reaction">
+    <img class="icon" src="./assets/images/icon-reaction.svg" alt="icon" >
+    <h4><strong>Reaction</strong></h4>
+    </div>
+  <p><span class="strong">80</span>/ 100</p>
+</div>
+
+ <div class="memory">
+  <div class="left-memory">
+  <img  class="icon"  src="./assets/images/icon-memory.svg" alt="icon">
+  <h4><strong>Memory</strong></h4>
+</div>
+  <p><strong>92</strong>/ 100</p>
+ </div>
+ 
+<div class="verbal">
+  <div class="left-verbal">
+  <img class="icon" src="./assets/images/icon-verbal.svg" alt="icon"> 
+  <h4>Verbal</h4>
+</div>
+  <p><strong>61 </strong>  / 100</p>
+</div>
+
+<div class="visual">
+  <div class="left-visual p">
+    <img class="icon" src="./assets/images/icon-visual.svg" alt="icon">
+  <h4>Visual</h4>
+  </div>
+  <p><strong>72</strong>  / 100</p>
+</div>
+
+<div id="text">
+ <h4 >Continue</h4>
+</div>
+
+ </section>
+</div> 
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">janechizzy</a>.
+  </div>
+</body>
+</html>
